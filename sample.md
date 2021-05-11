@@ -7,5 +7,6 @@ DBサーバー -> webサーバー : 商品検索結果
 webサーバー -> ユーザー : 商品検索結果
 
 activate ユーザー
+deactivate ユーザー
 @enduml
 ```
