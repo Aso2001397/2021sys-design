@@ -60,7 +60,7 @@ skinparam class {
 
 customer |o-o{ order
 order ||-|{ order_detail
-order_detail }-|| item
+order_detail }-|| items
 item ||-o{ category
 
 @enduml
