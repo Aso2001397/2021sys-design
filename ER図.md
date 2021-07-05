@@ -49,7 +49,7 @@
     }
  @enduml
 
-@startuml erd
+@startuml
 
 顧客マスタ ||-o{ 購入テーブル
 購入テーブル ||-o{ 購入詳細テーブル
