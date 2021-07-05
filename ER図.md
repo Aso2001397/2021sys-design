@@ -47,6 +47,7 @@
         name
         reg_date
     }
+ @enduml
 
 @startuml erd
 !include tables.pu
