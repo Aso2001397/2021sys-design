@@ -63,7 +63,7 @@ package "ECサイト" as target_system {
 customer |o-o{ order
 order ||-|{ order_detail
 order_detail }-|| items
-item ||-o{ category
+items ||-o{ category
 
 @enduml
 ```
