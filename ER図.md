@@ -1,5 +1,5 @@
 ```startuml
-@startuml
+@startuml　tables
     entity "顧客マスタ" as customer <m_customers>{
         + customer_code [PK]
         --
@@ -48,7 +48,9 @@
         reg_date
     }
 
-@startuml
+@startuml erd
+!include tables.pu
+
 顧客マスタ ||-o{ 購入テーブル
 購入テーブル ||-o{ 購入詳細テーブル
 購入詳細テーブル ||-o| 商品マスタ
