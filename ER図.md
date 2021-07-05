@@ -11,9 +11,7 @@
         del_flag
         reg_date
     }
-@enduml
 
-@startuml
     entity "購入テーブル" as customer <d_purchase>{
         + order_id [PK]
         --
@@ -21,9 +19,7 @@
         purchase_date
         total_price
     }
-@enduml
 
-@startuml
     entity "購入詳細テーブル" as customer <d_purchase_detail>{
         + order_id[PK]
         + detail_id[PK]
@@ -32,9 +28,7 @@
         price
         num
     }
-@enduml
 
-@startuml
     entity "商品マスタ" as customer <m_items>{
         + item_code [PK]
         --
@@ -46,16 +40,13 @@
         del_flag
         reg_date
     }
-@enduml
 
-@startuml
     entity "カテゴリマスタ" as customer <m_category>{
         + category_id [PK]
         --
         name
         reg_date
     }
-@enduml
 
 @startuml
 顧客マスタ ||-o{ 購入テーブル
