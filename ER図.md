@@ -64,6 +64,7 @@
         reg_date
     }
 @enduml
+```
 
 ```startuml
 @startuml
