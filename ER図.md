@@ -64,4 +64,18 @@
         reg_date
     }
 @enduml
-```
+
+```startuml
+@startuml
+-companies ||-o{ users
++companies ||-d-o{ users
+ companies ||-o{ positions
+-users ||-o| user_profiles
+-users ||-o{ user_subordinate_users
++users ||-l-o| user_profiles
++users ||-d-o{ user_subordinate_users
+ users ||-o{ user_positions
+ positions ||-o{ user_positions
+ 
+ @enduml
+ ```
