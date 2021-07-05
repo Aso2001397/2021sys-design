@@ -18,8 +18,8 @@
 @startuml
     entity "購入テーブル" as customer <d_purchase>{
         + order_id [PK]
-        + customer_code[FK]
         --
+        + customer_code[FK]
         purchase_date
         total_price
     }
@@ -30,9 +30,9 @@
 @startuml
     entity "購入詳細テーブル" as customer <d_purchase_detail>{
         + order_id[PK]
-        + detail_id
-        + item_code[FK]
+        + detail_id[PK]
         --
+        + item_code[FK]
         price
         num
     }
@@ -47,7 +47,6 @@
         item_name
         price
         + category_id[FK]
-        --
         image
         detail
         del_flag
