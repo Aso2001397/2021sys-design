@@ -68,15 +68,9 @@
 
 ```startuml
 @startuml
--companies ||-o{ users
-+companies ||-d-o{ users
- companies ||-o{ positions
--users ||-o| user_profiles
--users ||-o{ user_subordinate_users
-+users ||-l-o| user_profiles
-+users ||-d-o{ user_subordinate_users
- users ||-o{ user_positions
- positions ||-o{ user_positions
- 
- @enduml
+顧客マスタ ||-o{ 購入テーブル
+購入テーブル ||-o{ 購入詳細テーブル
+購入詳細テーブル ||-o| 商品マスタ
+商品マスタ ||-o{ カテゴリマスタ
+@enduml
  ```
