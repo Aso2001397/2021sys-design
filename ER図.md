@@ -41,7 +41,7 @@ entity "購入詳細テーブル" as order_detail <d_purchase_detail> <<T,TRANSA
         num
 }
 
-entity "商品マスタ" as item <m_items> <<M,MASTER_MARK_COLOR>> {
+entity "商品マスタ" as items <m_items> <<M,MASTER_MARK_COLOR>> {
         + item_code [PK]
         --
         item_name
@@ -62,8 +62,8 @@ entity "カテゴリマスタ" as category <m_category> <<M,MASTER_MARK_COLOR>> 
 
 customer |o-o{ order
 order ||-|{ order_detail
-order_detail }-|| item
-item ||-o{ category
+order_detail }-|| items
+items ||-o{ category
 
 
 @enduml
