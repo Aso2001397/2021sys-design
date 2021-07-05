@@ -1,6 +1,16 @@
 ```startuml
-@startuml　tables
-    entity "顧客マスタ" as customer <m_customers>{
+@startuml
+
+!define MASTER_MARK_COLOR Orange 
+!define TRANSACTION_MARK_COLOR DeepSkyBlue
+
+skinparam class {
+    BackgroundColor Snow
+    BorderColor Black
+    ArrowColor Black
+}
+
+    entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
         + customer_code [PK]
         --
         pass
@@ -12,7 +22,7 @@
         reg_date
     }
 
-    entity "購入テーブル" as customer <d_purchase>{
+    entity "購入テーブル" as order <d_purchase><<T,TRANSACTION_MARK_COLOR>>{
         + order_id [PK]
         --
         + customer_code[FK]
@@ -20,7 +30,7 @@
         total_price
     }
 
-    entity "購入詳細テーブル" as customer <d_purchase_detail>{
+    entity "購入詳細テーブル" as order_detail <d_purchase_detail><<T,TRANSACTION_MARK_COLOR>>{
         + order_id[PK]
         + detail_id[PK]
         --
@@ -29,7 +39,7 @@
         num
     }
 
-    entity "商品マスタ" as customer <m_items>{
+    entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>>{
         + item_code [PK]
         --
         item_name
@@ -41,19 +51,17 @@
         reg_date
     }
 
-    entity "カテゴリマスタ" as customer <m_category>{
+    entity "カテゴリマスタ" category <m_category><<M,MASTER_MARK_COLOR>>{
         + category_id [PK]
         --
         name
         reg_date
     }
- @enduml
 
-@startuml
+customer |o-o{ order
+order ||-|{ order_detail
+order_detail }-|| item
+item ||-o{ category
 
-顧客マスタ ||-o{ 購入テーブル
-購入テーブル ||-o{ 購入詳細テーブル
-購入詳細テーブル ||-o| 商品マスタ
-商品マスタ ||-o{ カテゴリマスタ
 @enduml
  ```
