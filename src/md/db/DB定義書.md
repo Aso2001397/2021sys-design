@@ -11,44 +11,44 @@
 |購入日|purchase_date|date||○||
 |総額|total_price|int(11)||○||
 
-### d_purchase_detail
-|属性名|型|PK|NN|FK|
-|:---|:---|:---|:---:|:----:|
-|detail_id|bigint(20)|○|○||
-|detail_id|bigint(20)|○|○|○|
-|item_code|int(11)||○||
-|price|int(11)||○||
-|num|int(11)||○||
+### 購入詳細テーブル (d_purchase_detail)
+|和名|属性名|型|PK|NN|FK|
+|:---|:---|:---|:---|:---:|:----:|
+|オーダー詳細ID|detail_id|bigint(20)|○|○||
+|オーダーID|detail_id|bigint(20)|○|○|○|
+|商品コード|item_code|int(11)||○||
+|価格|price|int(11)||○||
+|数量|num|int(11)||○||
 
-### m_customers
-|属性名|型|PK|NN|FK|
-|:---|:---|:---|:---:|:----:|
-|customer_code|varchar(50)|○|○||
-|pass|varchar(50)|○|○|○|
-|name|varchar(50)||○||
-|address|varchar(50)||○||
-|tel|varchar(50)||○||
-|mail|varchar(50)||○||
-|del_flag|int(11)||||
-|reg_date|date||○||
+### 顧客マスタ (m_customers)
+|和名|属性名|型|PK|NN|FK|
+|:---|:---|:---|:---|:---:|:----:|
+|顧客コード|customer_code|varchar(50)|○|○||
+|パスワード|pass|varchar(50)|○|○|○|
+|氏名|name|varchar(50)||○||
+|住所|address|varchar(50)||○||
+|電話番号|tel|varchar(50)||○||
+|メールアドレス|mail|varchar(50)||○||
+|削除フラグ|del_flag|int(11)||||
+|登録日|reg_date|date||○||
 
-### m_category
-|属性名|型|PK|NN|FK|
-|:---|:---|:---|:---:|:----:|
-|category_id|int(11)|○|○||
-|name|varchar(20)||○||
-|reg_date|date||○||
+### カテゴリマスタ (m_category)
+|和名|属性名|型|PK|NN|FK|
+|:---|:---|:---|:---|:---:|:----:|
+|カテゴリID|category_id|int(11)|○|○||
+|カテゴリ名|name|varchar(20)||○||
+|登録日|reg_date|date||○||
 
-### m_items
-|属性名|型|PK|NN|FK|
-|:---|:---|:---|:---:|:----:|
-|item_code|int(11)|○|○||
-|item_name|varchar(50)||○||
-|price|int(11)||○||
-|category_id|int(11)||○|○|
-|image|varchar(200)||○||
-|detail|varchar(500)||||
-|del_flag|int(11)||||
-|reg_date|date||○||
+### 商品マスタ (m_items)
+|和名|属性名|型|PK|NN|FK|
+|:---|:---|:---|:---|:---:|:----:|
+|商品コード|item_code|int(11)|○|○||
+|商品名|item_name|varchar(50)||○||
+|価格|price|int(11)||○||
+|カテゴリID|category_id|int(11)||○|○|
+|画像ファイル名|image|varchar(200)||○||
+|商品詳細説明|detail|varchar(500)||||
+|削除フラグ|del_flag|int(11)||||
+|登録日|reg_date|date||○||
 
 
