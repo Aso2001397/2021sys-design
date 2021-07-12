@@ -6,7 +6,7 @@
 ### 購入テーブル (d_purchase)
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |:---|:---|:---|:---|:---:|:----:|
-|オーダーID|order_id|bigint(20)|○|○||
+|購入ID|order_id|bigint(20)|○|○||
 |顧客コード|customer_code|varchar(50)||○||
 |購入日|purchase_date|date||○||
 |総額|total_price|int(11)||○||
