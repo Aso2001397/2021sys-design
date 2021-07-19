@@ -12,19 +12,18 @@ skinparam class {
 
 package "ECサイト" as target_system {
 
-    entity "顧客マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>>{
+    entity "顧客マスタ" as customer <t_customers> <<M,MASTER_MARK_COLOR>>{
         + customer_code [PK]
         --
         pass
         name
         address
         tel
-        mail
         del_flag
         reg_date
     }
 
-    entity "購入テーブル" as order <d_purchase> <<T,TRANSACTION_MARK_COLOR>>{
+    entity "購入テーブル" as order <t_purchase> <<T,TRANSACTION_MARK_COLOR>>{
         + order_id [PK]
         --
         + customer_code[FK]
@@ -47,7 +46,9 @@ package "ECサイト" as target_system {
         item_name
         price
         + category_id[FK]
+        okiniiri
         image
+        kosuu
         detail
         del_flag
         reg_date
