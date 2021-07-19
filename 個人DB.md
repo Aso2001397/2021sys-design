@@ -14,8 +14,8 @@
 ### 購入詳細テーブル (d_purchase_detail)
 |和名|属性名|型|PK|NN|FK|
 |:---|:---|:---|:---|:---:|:----:|
-|オーダー詳細ID|detail_id|bigint(20)|○|○||
-|オーダーID|detail_id|bigint(20)|○|○|○|
+|購入詳細ID|detail_id|bigint(20)|○|○||
+|購入ID|detail_id|bigint(20)|○|○|○|
 |商品コード|item_code|int(11)||○||
 |価格|price|int(11)||○||
 |数量|num|int(11)||○||
@@ -23,12 +23,10 @@
 ### 顧客マスタ (m_customers)
 |和名|属性名|型|PK|NN|FK|
 |:---|:---|:---|:---|:---:|:----:|
-|顧客コード|customer_code|varchar(50)|○|○||
 |パスワード|pass|varchar(50)|○|○|○|
 |氏名|name|varchar(50)||○||
-|住所|address|varchar(50)||○||
+|Eメールアドレス|address|varchar(50)||○||
 |電話番号|tel|varchar(50)||○||
-|メールアドレス|mail|varchar(50)||○||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||○||
 
@@ -46,7 +44,9 @@
 |商品名|item_name|varchar(50)||○||
 |価格|price|int(11)||○||
 |カテゴリID|category_id|int(11)||○|○|
-|画像ファイル名|image|varchar(200)||○||
-|商品詳細説明|detail|varchar(500)||||
+|お気に入り|okiniiri_id|varchar(10)||○|○|
+|商品画像|image|varchar(200)||○||
+|個数選択|kosuu_id|int(11)||○||
+|商品説明|detail|varchar(500)||||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||○||
