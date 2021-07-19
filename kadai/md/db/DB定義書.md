@@ -14,7 +14,7 @@
 ## 購入詳細テーブル (t_purchase_detail)
 |和名|属性名|型|PK|NN|FK|
 |:---|:---|:---|:---|:---:|:----:|
-|購入詳細ID|detail_id|bigint(20)|○|○||
+|購入詳細ID|order_id|bigint(20)|○|○||
 |購入ID|detail_id|bigint(20)|○|○|○|
 |商品コード|item_code|int(11)||○||
 |価格|price|int(11)||○||
