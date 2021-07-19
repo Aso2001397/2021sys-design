@@ -1,6 +1,6 @@
 # DB定義書
 ## ER図
-[ER図はこちら](https://github.com/Aso2001397/2021sys-design/blob/main/kadai/md/db/ER%E5%9B%B3.md"ER図はこちら")
+[ER図はこちら](https://github.com/Aso2001397/2021sys-design/blob/main/kadai/md/db/ER%E5%9B%B3.md "ER図はこちらからお願いします")
 
 # DBテーブルカラム詳細一覧
 ## 購入テーブル (t_purchase)
